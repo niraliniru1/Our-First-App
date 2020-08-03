@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PayComponent } from './pay/pay.component';
+import { CreditComponent } from './credit/credit.component';
+import { ReceiptComponent } from './receipt/receipt.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PayComponent,
+    CreditComponent,
+    ReceiptComponent
   ],
   imports: [
     BrowserModule,
