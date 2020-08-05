@@ -1,1 +1,10 @@
+@import '../../styles.scss';
 
+label {
+  color: lightgreen;
+  @include label;
+}
+
+input {
+  @include input;
+}

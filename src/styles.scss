@@ -2,6 +2,7 @@
 h2 {
   margin: 30px auto;
   text-align: center;
+  color: brown;
 }
 
 .btn {
@@ -12,14 +13,14 @@ h2 {
 }
 
 
-label {
+@mixin label {
   margin-right: 20px;
   font-weight: bold;
   padding: 5px;
   width: 100px;
 }
 
-input {
+@mixin input {
   width: 200px;
   border: 1px solid lightgray;
 }

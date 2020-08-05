@@ -1,10 +1,10 @@
-.Frist Name {
-    width: 500px;
-    margin: 10px;
-    background-color: lime;
+@import '../../styles.scss';
+
+label {
+  color: darkgreen;
+  @include label;
 }
 
-.Last Name {
-    width: 1000px;
-    margin: 20px;
+input {
+  @include input;
 }
