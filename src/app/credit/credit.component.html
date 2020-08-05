@@ -1,19 +1,19 @@
-<div class="outer-div">
+<div class="outer-input">
    <label> Card Name</label><input type = "text">
 </div>
-<div class="outer-div">
+<div class="outer-input">
     <label> Card Number</label><input type = "number">
 </div>
-<div class="outer-div">
+<div class="outer-input">
     <label> Expiry month</label><input class="month" type = "text">
 </div>
-<div class="outer-div">
+<div class="outer-input">
     <label> Expiry year</label><input class="year" type = "number">
 </div>
-<div class="outer-div">
-<label> CVV</label><input class="cvv" type = "number">
-</div> 
-<div class="button">
-<button (click)="onCreditCancel()"> Back </button>
-<button (click)="onCreditConfirm()"> Next </button>
+<div class="outer-input">
+  <label> CVV</label><input class="cvv" type = "number">
+</div>
+<div class="outer-button">
+<button class="btn btn-primary" (click)="onCreditCancel()"> Back </button>
+<button class="btn btn-primary" (click)="onCreditConfirm()"> Next </button>
 </div>
