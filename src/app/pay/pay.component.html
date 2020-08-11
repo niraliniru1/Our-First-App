@@ -1,12 +1,47 @@
-<h2>Welcome to Pay !</h2>
+<h1>Welcome to Our First App {{name}} !!</h1>
+<h2>Personal Details !</h2>
+<form (ngSubmit)=onPayClick(f) #f=ngForm>
 <div class="outer-input">
-  <label>First Name</label><input type="text">
-</div>
-<div class="outer-input">
-  <label>Last Name</label><input type="text">
+   <label>First Name</label>
+   <input (change)=onNamechange($event)  
+    type="text"
+    name="first" ngModel required>
 </div>
 
-<div class="outer-button">
-  <button class="btn btn-primary" (click)="onPayClick()"> Next </button>
+<div class="outer-input">
+  <label>Last Name</label>
+  <input type="text"
+  name="last" ngModel required>
 </div>
+
+<div class="outer-input">
+   <label>Email</label> 
+   <input type="email"
+   name="email" 
+   pattern= "^\S*[@]\S*[.]\S*$" ngModel required
+   #email=ngModel>
+  <div>
+   <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email!</span>
+  </div>
+</div>
+<div class="outer-input">
+  <label>Secret Question</label>
+  <select>
+  <input type="text"
+  name="secret"
+  ngModel>
+  <option value="school">Your first school name?</option>
+  <option value="favourite">Your favourite subject?</option>
+</select>
+</div>
+<div class="outer input">
+  <label>Your anwer</label>
+  <textarea name="answer"
+    rows="3"
+    ngModel></textarea>
+</div>
+<div class="outer-button">
+  <button class="btn btn-primary" type="submit" [disabled]="!f.valid"> Next </button>
+</div>
+</form>
 

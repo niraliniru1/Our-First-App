@@ -8,3 +8,12 @@ label {
 input {
   @include input;
 }
+h1 {
+  color: green;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}

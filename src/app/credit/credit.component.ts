@@ -13,8 +13,11 @@ export class CreditComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onCreditConfirm() {
-    this.router.navigate(['receipt']);
+  onCreditConfirm(f): any {
+    console.log(f)
+    if (f.status==='VALID'){
+      return this.router.navigate(['receipt']);
+    }
   }
 
   onCreditCancel() {

@@ -4,12 +4,21 @@ h2 {
   text-align: center;
   color: brown;
 }
+h3 {
+  text-align: center;
+  color: green ;
+}
+p {
+  text-align: center;
+  color: blue;
+}
 
 .btn {
   width: 200px;
   margin: 20px;
   font-size: 20px;
   padding: 5px;
+  align-content: flex-end;
 }
 
 
@@ -22,7 +31,7 @@ h2 {
 
 @mixin input {
   width: 200px;
-  border: 1px solid lightgray;
+  border: 2px solid grey;
 }
 
 .outer-input {
@@ -36,4 +45,11 @@ h2 {
   display: flex;
   justify-content: center;
   max-width: 700px;
+  margin-left: 400px;
+}
+
+.btn-secondary {
+  color: white;
+  background-color: blue;
+  margin-left: 10px;
 }
