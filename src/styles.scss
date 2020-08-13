@@ -14,7 +14,7 @@ p {
 }
 
 .btn {
-  width: 200px;
+  width: 150px;
   margin: 20px;
   font-size: 20px;
   padding: 5px;
@@ -23,7 +23,6 @@ p {
 
 
 @mixin label {
-  margin-right: 20px;
   font-weight: bold;
   padding: 5px;
   width: 100px;
@@ -31,13 +30,14 @@ p {
 
 @mixin input {
   width: 200px;
-  border: 2px solid grey;
+  border: 2px solid goldenrod;
 }
 
 .outer-input {
   margin: 20px auto;
   display: flex;
-  justify-content: center;
+  // justify-content: center;
+ max-width: 500px;
 }
 
 
@@ -45,7 +45,7 @@ p {
   display: flex;
   justify-content: center;
   max-width: 700px;
-  margin-left: 400px;
+  margin: 0 auto;
 }
 
 .btn-secondary {
@@ -53,3 +53,20 @@ p {
   background-color: blue;
   margin-left: 10px;
 }
+
+.field-error {
+  color: red;
+}
+ .year {
+   padding: 10px;
+ }
+
+ .month {
+   width: 100px;
+ }
+ select {
+  width: 100px;
+  border: 2px solid goldenrod;
+ }
+
+ 

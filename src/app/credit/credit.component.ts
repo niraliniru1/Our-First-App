@@ -7,13 +7,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./credit.component.scss']
 })
 export class CreditComponent implements OnInit {
-
+  onSubmit= false;
   constructor(private readonly router: Router) { }
 
   ngOnInit(): void {
   }
 
   onCreditConfirm(f): any {
+    this.onSubmit= true;
     console.log(f)
     if (f.status==='VALID'){
       return this.router.navigate(['receipt']);
