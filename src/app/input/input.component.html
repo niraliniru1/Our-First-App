@@ -1,0 +1,9 @@
+<div class="outer-input">
+    <label>{{labelName}}</label>
+    <input (change)=onNamechange($event,input)
+     type="{{type}}"
+     name="{{name}}" ngModel required="{{required}}" pattern="{{pattern}}"
+     #input=ngModel>
+<div class="field-error" *ngIf="!input.valid">please enter {{labelName}}</div>
+<!-- <div class="field-error" *ngIf="checkForPattern()">please enter valid {{labelName}}</div> -->
+</div>

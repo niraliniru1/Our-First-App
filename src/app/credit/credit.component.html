@@ -14,17 +14,24 @@
         <input type="radio" name= "card-radio">
         <img src="assets/images/amex.png" style="width: 50px; height: 40px;" input type="radio">
     </div>  
+
 </div>
     <form (ngSubmit)=onCreditConfirm(f) #f=ngForm>
     <span class="error-message" *ngIf="!f.valid && onSubmit">Please enter all the required fields</span>
-<div class="outer-input">
+<!--div class="outer-input">
  <label> Card Name</label>
    <input type = "text" 
    placeholder="eg:rohiNirali"
     name="card" ngModel required
     #card=ngModel>  
-</div>
-<div class="outer-input">
+</div-->
+<app-input labelName="Card Name" type="text" name="card" required="true"></app-input>
+<app-input labelName="Card Number" type="number" name="num" required="true"></app-input>
+<app-input labelName="Expiry Date" type="text" name="expiry" required="true"></app-input>
+<app-input labelName="CVV" type="text" name="cvv" required="true"></app-input>
+<!--app-input labelName="Expiry Year" type="text" name="year" required="true"></app-input-->
+
+<!--div class="outer-input">
    <label> Card Number</label>
    <input type = "text"
    placeholder="eg:1111222233334444"
@@ -33,7 +40,7 @@
 </div>
 <div class="outer-input">
    <label> Expiry Date</label>
-   
+
    <select name= "expiry" ngModel required
    #expiry=ngModel>
     <option value="01">January</option>
@@ -67,7 +74,8 @@
    placeholder="eg:123"
    name= "cvv" ngModel required
    #cvv=ngModel>
-</div>
+</div-->
+
 <div class="outer-button">
 <button class="btn btn-secondary" (click)="onCreditCancel()"> Back </button>
 <button class="btn btn-secondary" type="submit" > Next </button>

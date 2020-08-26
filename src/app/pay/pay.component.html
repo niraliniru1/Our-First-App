@@ -1,17 +1,19 @@
 <h1>Welcome to Our First App {{name}} !!</h1>
 <h2>Personal Details !</h2>
 <form (ngSubmit)=onPayClick() #f=ngForm>
-<div class="outer-input">
+<!--div class="outer-input">
    <label>First Name</label>
    <input (change)=onNamechange($event)  
     type="text"
     name="first" ngModel required
     #first=ngModel>
-    <br>
     <div class="field-error" *ngIf="!first.valid && onSubmit">Please enter first name</div>
-</div>
+</div-->
+<app-input labelName="First Name" type="text" name="first" required="false"></app-input>
+<app-input labelName="Last Name" type="text" name="last" required="false"></app-input>
+<app-input labelName="Email" type="email" name="email" required="false"  pattern= "^\S*[@]\S*[.]\S*$" ></app-input>
 
-<div class="outer-input">
+<!--div class="outer-input">
   <label>Last Name</label>
   <input type="text"
   name="last" ngModel required
@@ -29,8 +31,9 @@
    #email=ngModel>
    <div class="field-error" *ngIf="email.errors?.required && onSubmit">Please enter email</div>
    <div class="field-error" *ngIf="email.errors?.pattern && onSubmit">Please enter a valid email</div>
-</div>
-<div class="outer-input">
+</div-->
+
+<!--div class="outer-input">
   <label>Secret Question</label>
   <select>
   <input type="text"
@@ -45,7 +48,7 @@
   <textarea name="answer"
     rows="3"
     ngModel ></textarea>
-</div>
+</div-->
 <div class="outer-button">
   <button class="btn btn-primary" type="submit"> Next </button>
 </div>

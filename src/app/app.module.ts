@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { PayComponent } from './pay/pay.component';
 import { CreditComponent } from './credit/credit.component';
 import { ReceiptComponent } from './receipt/receipt.component';
+import { InputComponent } from './input/input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PayComponent,
     CreditComponent,
-    ReceiptComponent
+    ReceiptComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,

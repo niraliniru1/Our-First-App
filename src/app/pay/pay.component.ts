@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 
@@ -8,6 +8,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./pay.component.scss']
 })
 export class PayComponent implements OnInit {
+
   name;
   onSubmit= false;
   @ViewChild('f') myForm: NgForm;
