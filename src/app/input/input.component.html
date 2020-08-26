@@ -1,6 +1,6 @@
 <div class="outer-input">
     <label>{{labelName}}</label>
-    <input (change)=onNamechange($event,input)
+    <input (change)=onValueChange($event)
      type="{{type}}"
      name="{{name}}" ngModel required="{{required}}" pattern="{{pattern}}"
      #input=ngModel>

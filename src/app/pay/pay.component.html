@@ -3,15 +3,15 @@
 <form (ngSubmit)=onPayClick() #f=ngForm>
 <!--div class="outer-input">
    <label>First Name</label>
-   <input (change)=onNamechange($event)  
+   <input (change)=onNamechange($event)
     type="text"
     name="first" ngModel required
     #first=ngModel>
     <div class="field-error" *ngIf="!first.valid && onSubmit">Please enter first name</div>
 </div-->
-<app-input labelName="First Name" type="text" name="first" required="false"></app-input>
-<app-input labelName="Last Name" type="text" name="last" required="false"></app-input>
-<app-input labelName="Email" type="email" name="email" required="false"  pattern= "^\S*[@]\S*[.]\S*$" ></app-input>
+<app-input labelName="First Name" type="text" name="first" required="true" (value)="getFirstName($event)"></app-input>
+<app-input labelName="Last Name" type="text" name="last" required="true"></app-input>
+<app-input labelName="Email" type="email" name="email" required="true"  pattern= "^\S*[@]\S*[.]\S*$" ></app-input>
 
 <!--div class="outer-input">
   <label>Last Name</label>
@@ -22,11 +22,11 @@
 </div>
 
 <div class="outer-input">
-   <label>Email</label> 
+   <label>Email</label>
    <input type="email"
-   name="email" 
-   pattern= "^\S*[@]\S*[.]\S*$" 
-   ngModel 
+   name="email"
+   pattern= "^\S*[@]\S*[.]\S*$"
+   ngModel
    required
    #email=ngModel>
    <div class="field-error" *ngIf="email.errors?.required && onSubmit">Please enter email</div>

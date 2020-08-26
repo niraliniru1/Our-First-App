@@ -8,27 +8,33 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./pay.component.scss']
 })
 export class PayComponent implements OnInit {
-
   name;
-  onSubmit= false;
+  firstName;
+  lasttName;
+  email;
+  onSubmit = false;
   @ViewChild('f') myForm: NgForm;
   constructor(private readonly router: Router) { }
 
   ngOnInit(): void {
-    
-  }
-  onNamechange(event): any {
-    console.log(event);
-    this.name= event.target.value;
-}
-  onPayClick(): any {
-    this.onSubmit= true;
-    console.log(this.myForm);
-    if (this.myForm.status==='VALID') { 
-      return this.router.navigate(['credit']);
-    }; 
-    
 
   }
+
+  onPayClick(): any {
+    this.onSubmit = true;
+    console.log(this.myForm)
+    if (this.getFormStatus()) {
+      return this.router.navigate(['credit']);
+    };
+  }
+
+  getFormStatus() {
+    return this.firstName && this.firstName.target.value;
+  }
+
+  getFirstName(event) {
+    this.firstName = event;
+  }
+
 
 }

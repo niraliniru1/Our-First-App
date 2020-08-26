@@ -7,29 +7,22 @@ import { NgModel } from '@angular/forms';
   styleUrls: ['./input.component.scss']
 })
 export class InputComponent implements OnInit {
-
-@Output() FirstName = new EventEmitter<string>();
+@Input() labelName: string;
+@Input() type:string;
+@Input() required: boolean=true;
+@Input() name:string;
+@Input() pattern:string;
+@Output() value = new EventEmitter<string>();
   constructor() { }
-  @Input() labelName: string;
-  @Input() type:string;
-  @Input() required: boolean=true;
-  @Input() name:string;
-  @Input() pattern:string;
+
   input: NgModel;
-
-
 
   ngOnInit(): void {
     console.log(this.input)
-
-  }
-  onNamechange(event,input): any {
-    console.log(input);
-    this.name= event.target.value;
   }
 
-  checkForPattern() {
-    
+  onValueChange(event): any {
+    this.value.emit(event);
   }
 
 }
